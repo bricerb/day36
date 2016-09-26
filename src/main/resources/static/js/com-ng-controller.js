@@ -8,7 +8,8 @@ angular.module('TIYChocolateApp', [])
         $scope.input = {};
 
         $scope.makeChocolate = function(numSmalls, numBigs, numGoals) {
-            $http.get("http://localhost:8080/make-chocolate.json?smalls="+numSmalls+"&bigs="+numBigs +"&goal="+numGoals)
+            // $http.get("http://localhost:8080/make-chocolate.json?smalls="+numSmalls+"&bigs="+numBigs +"&goal="+numGoals)
+            $http.get("/make-chocolate.json?smalls="+numSmalls+"&bigs="+numBigs +"&goal="+numGoals)
                 .then(
                     function successCallBack(response) {
                         $scope.whateverThisIs = response.data;
